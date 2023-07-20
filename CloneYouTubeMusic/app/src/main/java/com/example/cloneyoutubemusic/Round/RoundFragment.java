@@ -10,7 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.cloneyoutubemusic.MainActivity;
 import com.example.cloneyoutubemusic.R;
+import com.example.cloneyoutubemusic.Round.chart.ChartActivity;
+import com.example.cloneyoutubemusic.Round.recent.RecentFragment;
 import com.example.cloneyoutubemusic.databinding.FragmentRoundBinding;
 import com.example.cloneyoutubemusic.search.SearchActivity;
 
@@ -38,6 +41,18 @@ public class RoundFragment extends Fragment {
 
         binding.recvMoods.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
         binding.recvMoods.setAdapter(new AdapterMoods());
+
+        binding.recentMusic.setOnClickListener(v->{
+            MainActivity activity = (MainActivity) getActivity();
+            activity.changeFragment(1 ,new RecentFragment());
+            //ntent intent = new Intent(requireContext(), RecentActivity.class);
+            //startActivity(intent);
+        });
+
+        binding.chart.setOnClickListener(v->{
+            Intent intent = new Intent(requireContext(), ChartActivity.class);
+            startActivity(intent);
+        });
 
 
         return binding.getRoot();

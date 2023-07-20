@@ -1,0 +1,16 @@
+package com.example.cloneyoutubemusic.Round.chart;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+import com.example.cloneyoutubemusic.R;
+
+public class ChartActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_chart);
+    }
+}

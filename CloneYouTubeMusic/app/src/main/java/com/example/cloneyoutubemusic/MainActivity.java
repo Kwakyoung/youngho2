@@ -55,5 +55,22 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //1.RoundFragment =>  메인 액티비티에서 프래그먼트를 바꿈 => container
+    //2.ChildFragment를 이용 . ( RoundFragment 내부에 있는 내용을 지우고 -> 자식 프래그먼트를 붙임 ) (귀찮음)
+    int backPressed = 0;
+    public void changeFragment(int backPressed, Fragment fragment){
+        this.backPressed = backPressed;
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(backPressed==1){
+            changeFragment(0 , roundFragment );
+        }else{
+            finish();
+        }
+    }
+
 
 }
