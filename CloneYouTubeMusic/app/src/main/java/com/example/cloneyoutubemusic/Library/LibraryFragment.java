@@ -10,9 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.cloneyoutubemusic.MainActivity;
 import com.example.cloneyoutubemusic.R;
 import com.example.cloneyoutubemusic.databinding.FragmentLibraryBinding;
-import com.example.cloneyoutubemusic.search.SearchActivity;
+import com.example.cloneyoutubemusic.search.SearchFragment;
 
 import java.util.ArrayList;
 
@@ -27,8 +28,8 @@ public class LibraryFragment extends Fragment {
         binding = FragmentLibraryBinding.inflate(inflater, container , false);
 
         binding.search.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), SearchActivity.class);
-            startActivity(intent);
+            MainActivity activity = (MainActivity) getActivity();
+            activity.changeFragment(3 ,new SearchFragment());
         });
 
         binding.recvLibrary.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));

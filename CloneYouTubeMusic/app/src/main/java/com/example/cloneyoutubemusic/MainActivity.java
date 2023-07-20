@@ -15,9 +15,9 @@ import com.example.cloneyoutubemusic.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
-    HomeFragment homeFragment =          new HomeFragment() ;
-    RoundFragment roundFragment =          new RoundFragment() ;
-    LibraryFragment libraryFragment =          new LibraryFragment() ;
+    HomeFragment homeFragment =      new HomeFragment() ;
+    RoundFragment roundFragment =     new RoundFragment() ;
+    LibraryFragment libraryFragment =   new LibraryFragment() ;
 
 
 
@@ -67,7 +67,11 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         if(backPressed==1){
             changeFragment(0 , roundFragment );
-        }else{
+        }else if (backPressed==2){
+            changeFragment(1 , homeFragment );
+        }else if (backPressed==3) {
+            changeFragment(2 , libraryFragment );
+        }else {
             finish();
         }
     }

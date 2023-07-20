@@ -15,7 +15,7 @@ import com.example.cloneyoutubemusic.R;
 import com.example.cloneyoutubemusic.Round.chart.ChartActivity;
 import com.example.cloneyoutubemusic.Round.recent.RecentFragment;
 import com.example.cloneyoutubemusic.databinding.FragmentRoundBinding;
-import com.example.cloneyoutubemusic.search.SearchActivity;
+import com.example.cloneyoutubemusic.search.SearchFragment;
 
 import java.util.ArrayList;
 
@@ -29,8 +29,8 @@ public class RoundFragment extends Fragment {
         binding = FragmentRoundBinding.inflate(inflater, container, false);
 
         binding.search.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), SearchActivity.class);
-            startActivity(intent);
+            MainActivity activity = (MainActivity) getActivity();
+            activity.changeFragment(1 ,new SearchFragment());
         });
 
         binding.recvAlbum.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));

@@ -1,6 +1,5 @@
 package com.example.cloneyoutubemusic.Home;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,9 +12,10 @@ import android.view.ViewGroup;
 import com.example.cloneyoutubemusic.Home.DTO.HomeDTO;
 import com.example.cloneyoutubemusic.Home.DTO.MixDTO;
 import com.example.cloneyoutubemusic.Home.DTO.QuickDTO;
+import com.example.cloneyoutubemusic.MainActivity;
 import com.example.cloneyoutubemusic.R;
 import com.example.cloneyoutubemusic.databinding.FragmentHomeBinding;
-import com.example.cloneyoutubemusic.search.SearchActivity;
+import com.example.cloneyoutubemusic.search.SearchFragment;
 
 import java.util.ArrayList;
 
@@ -29,8 +29,11 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater,container,false);
 
         binding.search.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), SearchActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent(requireContext(), SearchActivity.class);
+//            startActivity(intent);
+            MainActivity activity = (MainActivity) getActivity();
+            activity.changeFragment(2 ,new SearchFragment());
+
         });
 
         binding.recvReplay.setAdapter(new HomeAdapter(getlist(),getContext()));

@@ -16,9 +16,6 @@
             android:name=".Round.chart.ChartActivity"
             android:exported="false" />
         <activity
-            android:name=".search.SearchActivity"
-            android:exported="false" />
-        <activity
             android:name=".MusicActivity"
             android:exported="false" />
         <activity
