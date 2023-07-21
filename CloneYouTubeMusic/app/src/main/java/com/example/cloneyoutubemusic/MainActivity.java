@@ -15,9 +15,9 @@ import com.example.cloneyoutubemusic.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
-    HomeFragment homeFragment =      new HomeFragment() ;
-    RoundFragment roundFragment =     new RoundFragment() ;
-    LibraryFragment libraryFragment =   new LibraryFragment() ;
+    HomeFragment homeFragment = new HomeFragment() ;
+    RoundFragment roundFragment = new RoundFragment() ;
+    LibraryFragment libraryFragment =  new LibraryFragment() ;
 
 
 
