@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import com.example.cloneyoutubemusic.MainActivity;
 import com.example.cloneyoutubemusic.R;
-import com.example.cloneyoutubemusic.Round.chart.ChartActivity;
+import com.example.cloneyoutubemusic.Round.chart.ChartFragment;
 import com.example.cloneyoutubemusic.Round.recent.RecentFragment;
 import com.example.cloneyoutubemusic.databinding.FragmentRoundBinding;
 import com.example.cloneyoutubemusic.search.SearchActivity;
@@ -50,8 +50,8 @@ public class RoundFragment extends Fragment {
         });
 
         binding.chart.setOnClickListener(v->{
-            Intent intent = new Intent(requireContext(), ChartActivity.class);
-            startActivity(intent);
+            MainActivity activity = (MainActivity) getActivity();
+            activity.changeFragment(1 ,new ChartFragment());
         });
 
 
