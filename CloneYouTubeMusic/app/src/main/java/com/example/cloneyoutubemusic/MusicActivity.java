@@ -105,7 +105,7 @@ public class MusicActivity extends AppCompatActivity {
                     seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
                         @Override
                         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
+                            binding.tvPlayingTime.setText("0:0"+progress);
                         }
 
                         @Override
