@@ -61,6 +61,9 @@ public class SearchFragment extends Fragment {
         list.add(new SearchVO(R.drawable.newjeans_supershy,"Super Shy","New Jeans"));
         list.add(new SearchVO(R.drawable.lucy,"히어로","루시"));
         list.add(new SearchVO(R.drawable.quick_stray,"이름엄청긴거입니다아아아아아아아","ㅋㅋ"));
+        list.add(new SearchVO(R.drawable.newjeans_supershy,"Super Shy","New Jeans"));
+        list.add(new SearchVO(R.drawable.lucy,"히어로","루시"));
+        list.add(new SearchVO(R.drawable.quick_stray,"이름엄청긴거입니다아아아아아아아","ㅋㅋ"));
 
         return list;
     }
