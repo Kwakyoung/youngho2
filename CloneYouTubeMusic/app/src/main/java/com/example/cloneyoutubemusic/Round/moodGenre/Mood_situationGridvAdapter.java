@@ -38,7 +38,7 @@ public class Mood_situationGridvAdapter extends BaseAdapter {
         ItemMoodSituationBinding binding = ItemMoodSituationBinding.inflate(inflater, parent, false);
 
 
-
+    //화이팅!
 
         return binding.getRoot();
     }
